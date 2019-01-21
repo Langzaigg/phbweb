@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<title>基础</title>
+</head>
+<body>
+<p> </p>
+</body>
+</html>
+<script language="javascript">
+var currentpos,timer;
+function initialize()
+{
+  timer=setInterval("scrollwindow()",25);
+}
+function sc(){
+if (event.button==1){
+  clearInterval(timer);
+}
+} 
+function scrollwindow()
+ {
+   currentpos=document.body.scrollTop;
+   window.scroll(0,++currentpos);
+   if (currentpos != document.body.scrollTop)
+     clearInterval(timer);
+ }
+ document.onmousedown=sc
+ document.ondblclick=initialize
+ </script>
